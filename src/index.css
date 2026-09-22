@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --rail-navy: #0B1120;
+    --rail-dark: #0F172A;
+    --rail-steel: #1E293B;
+    --rail-muted: #64748B;
+    --rail-border: #E2E8F0;
+    --rail-surface: #FFFFFF;
+    --rail-bg: #F8FAFC;
+    --rail-bg-subtle: #F1F5F9;
+
+    --rail-primary: #1E3A8A; /* Deep railway blue */
+    --rail-primary-hover: #172554;
+    --rail-accent: #3B82F6;
+    
+    --signal-red: #E11D48;
+    --signal-red-bg: #FFF1F2;
+    --signal-red-border: #FECDD3;
+
+    --signal-amber: #D97706;
+    --signal-amber-bg: #FFFBEB;
+    --signal-amber-border: #FDE68A;
+
+    --signal-green: #059669;
+    --signal-green-bg: #ECFDF5;
+    --signal-green-border: #A7F3D0;
+
+    --signal-blue: #2563EB;
+    --signal-blue-bg: #EFF6FF;
+    --signal-blue-border: #BFDBFE;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--rail-dark);
+    background-color: var(--rail-bg);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+}
+
+/* Glassmorphism & UI Accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom scrollbar for data-dense tables and timelines */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Print formatting for official Indian Railways executive report */
+@media print {
+  aside, header, .no-print {
+    display: none !important;
+  }
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

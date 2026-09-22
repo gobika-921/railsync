@@ -1,0 +1,6 @@
+{
+  "name": "RailSync",
+  "description": "AI-powered intelligent block planning control tower and corridor optimization engine for Indian Railways.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
